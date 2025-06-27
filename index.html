@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squeaky Kleen - Professional Cleaning Services</title>
+    <meta name="description" content="Squeaky Kleen offers professional deep cleaning for homes and offices in Nigeria. Book your cleaning today for a spotless, sanitized space!">
+    <meta property="og:title" content="Squeaky Kleen - Professional Cleaning Services">
+    <meta property="og:description" content="Professional deep cleaning for homes and offices. Experience a truly spotless space with Squeaky Kleen.">
+    <meta property="og:image" content="hero-cleaning.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.squeaky-kleen.ng/">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper.js CSS for testimonial slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="font-sans">
+<header>
+    <!-- Sticky Navigation Bar -->
+<nav class="fixed w-full z-40 bg-white/80 backdrop-blur shadow transition-colors duration-300">
+  <div class="container mx-auto flex items-center justify-between py-4 px-4">
+    <a href="#" class="text-2xl font-bold text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400">Squeaky Kleen</a>
+    <ul id="navbar-links" class="hidden md:flex space-x-8 text-lg font-medium mx-auto">
+      <li><a href="#services" class="text-gray-900 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition-colors duration-300">Services</a></li>
+      <li><a href="#about" class="text-gray-900 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition-colors duration-300">About</a></li>
+      <li><a href="#testimonials" class="text-gray-900 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition-colors duration-300">Testimonials</a></li>
+      <li><a href="#contact" class="text-gray-900 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition-colors duration-300">Contact</a></li>
+    </ul>
+    <a href="tel:+2348024080384" class="hidden md:inline-flex items-center gap-2 text-blue-700 font-semibold px-4 py-2 rounded hover:bg-blue-50 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition-colors duration-300 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+      +234 802 408 0384
+    </a>
+    <button id="nav-toggle" class="md:hidden ml-2 p-2 rounded focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition-colors duration-300 text-gray-700" aria-label="Open navigation menu" aria-expanded="false">
+      <!-- Hamburger Icon -->
+      <svg id="nav-hamburger" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Close Icon (hidden by default) -->
+      <svg id="nav-close" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden fixed inset-0 top-16 flex items-center justify-center bg-black bg-opacity-60 z-50 hidden transition-all duration-300">
+    <nav class="w-full max-w-xs mx-auto rounded-lg overflow-hidden bg-white shadow-2xl border border-gray-200">
+      <ul class="flex flex-col divide-y divide-gray-200">
+        <li><a href="#services" class="block w-full px-6 py-4 text-gray-900 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition">Services</a></li>
+        <li><a href="#about" class="block w-full px-6 py-4 text-gray-900 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition">About</a></li>
+        <li><a href="#testimonials" class="block w-full px-6 py-4 text-gray-900 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition">Testimonials</a></li>
+        <li><a href="#contact" class="block w-full px-6 py-4 text-gray-900 hover:bg-blue-50 hover:text-blue-600 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition">Contact</a></li>
+        <li><a href="tel:+2348024080384" class="block w-full px-6 py-4 text-blue-700 font-semibold hover:bg-blue-50 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 transition flex items-center justify-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5 mr-2 align-text-bottom" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm12-12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm0 12a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg>
+          +234 802 408 0384
+        </a></li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+<div class="h-16"></div>
+    <!-- Hero Section with Background Image Overlay -->
+<section class="relative bg-blue-100 text-white py-20 flex items-center justify-center min-h-[450px] animate-fadeIn overflow-hidden" style="background-attachment: fixed; min-height: 600px;">
+  <img src="./hero-cleaning.jpg" alt="Professional cleaning in progress"
+       class="absolute inset-0 w-full h-full object-cover pointer-events-none select-none parallax-bg z-0 md:object-center md:object-cover" 
+       style="opacity: 1;" loading="lazy">
+  <div class="absolute inset-0 pointer-events-none z-10">
+    <div class="w-full h-full bg-gradient-to-b from-blue-700/60 via-blue-600/30 to-blue-600/60"></div>
+    <div class="absolute left-1/4 top-10 w-8 h-8 bg-white/30 rounded-full animate-bounce-slow"></div>
+    <div class="absolute right-1/4 bottom-10 w-6 h-6 bg-white/20 rounded-full animate-bounce-slower"></div>
+    <div class="absolute left-1/2 top-1/2 w-4 h-4 bg-white/40 rounded-full animate-bounce"></div>
+  </div>
+  <div class="container mx-auto px-4 text-center relative z-20">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow">Transform Your Space with Squeaky Kleen</h1>
+    <p class="text-xl mb-8 drop-shadow">Sparkle and shine in every corner. Professional deep cleaning for homes and offices that leaves your space spotless, sanitized, and <em>Squeaky Kleen</em>.</p>
+    <a href="#contact" class="bg-yellow-500 text-black font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 focus-visible:ring-4 focus-visible:ring-yellow-300 transition shadow-lg inline-block ripple">Book Your Cleaning Today!</a>
+  </div>
+</section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why" class="py-16 bg-gray-100 animate-sectionReveal">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+      <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"/></svg>
+      Why Choose Squeaky Kleen?
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <!-- Sparkles icon for Unmatched Deep Cleaning -->
+          <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m16.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414M17.95 17.95l-1.414-1.414M6.05 6.05L4.636 7.464"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Unmatched Deep Cleaning</h3>
+        <p>From rugs to mattresses, we revive every surface with meticulous care.</p>
+      </div>
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <!-- Building office icon for Residential & Commercial Expertise -->
+          <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21V7a2 2 0 012-2h14a2 2 0 012 2v14M9 21V9h6v12"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Residential & Commercial Expertise</h3>
+        <p>Homes, offices, or post-construction sites — we make every space shine.</p>
+      </div>
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <!-- Shield check icon for Sanitized & Safe -->
+          <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4l7 4v6c0 5-7 8-7 8s-7-3-7-8V8l7-4z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Sanitized & Safe</h3>
+        <p>Our thorough process ensures a fresh, healthy environment for you and your loved ones.</p>
+      </div>
+      <div class="text-center">
+        <div class="flex justify-center mb-2">
+          <!-- User check icon for Trusted Professionals -->
+          <svg class="w-10 h-10 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 15c2.485 0 4.797.657 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 6l-3 3-2-2"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Trusted Professionals</h3>
+        <p>Experienced, reliable, and dedicated to delivering spotless results every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 animate-sectionReveal">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+      <svg class="w-7 h-7 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3"/></svg>
+      Our Services
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-md service-card">
+        <div class="flex justify-center mb-2">
+          <!-- Sparkles icon for Residential Deep Cleaning -->
+          <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2m9-9h-2M5 12H3m16.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414M17.95 17.95l-1.414-1.414M6.05 6.05L4.636 7.464"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Residential Deep Cleaning</h3>
+        <p>Rugs, furniture, mattresses, and more — we bring freshness back to your home.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md service-card">
+        <div class="flex justify-center mb-2">
+          <!-- Office building icon for Office Cleaning -->
+          <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21V7a2 2 0 012-2h14a2 2 0 012 2v14M9 21V9h6v12"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Office Cleaning</h3>
+        <p>Create a clean, professional workspace that boosts productivity and comfort.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md service-card">
+        <div class="flex justify-center mb-2">
+          <!-- Construction helmet icon for Post-Construction Cleanups -->
+          <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2 19a10 10 0 0120 0H2z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v4"/><path stroke-linecap="round" stroke-linejoin="round" d="M8 9v4"/><path stroke-linecap="round" stroke-linejoin="round" d="M16 9v4"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Post-Construction Cleanups</h3>
+        <p>Turn dusty construction sites into sparkling, move-in-ready spaces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gradient-to-r from-blue-100 via-white to-blue-100 animate-fadeIn animate-sectionReveal">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+      <svg class="w-7 h-7 text-pink-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"/></svg>
+      What Our Customers Say
+    </h2>
+    <div class="swiper testimonial-swiper max-w-2xl mx-auto" aria-label="Customer testimonials slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide bg-white p-6 rounded-lg shadow-md flex flex-col items-center testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Sarah T." class="w-16 h-16 rounded-full mb-4 border-2 border-blue-400 shadow" loading="lazy">
+          <div class="flex mb-2">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+          </div>
+          <p class="italic mb-4">"Squeaky Kleen transformed my home! My rugs and furniture look brand new, and the whole house feels so fresh!"</p>
+          <p class="font-semibold">— Sarah T., Homeowner</p>
+        </div>
+        <div class="swiper-slide bg-white p-6 rounded-lg shadow-md flex flex-col items-center testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Mark R." class="w-16 h-16 rounded-full mb-4 border-2 border-blue-400 shadow" loading="lazy">
+          <div class="flex mb-2">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+          </div>
+          <p class="italic mb-4">"Their post-construction cleanup was a lifesaver. The site was spotless and ready for use in no time!"</p>
+          <p class="font-semibold">— Mark R., Contractor</p>
+        </div>
+        <div class="swiper-slide bg-white p-6 rounded-lg shadow-md flex flex-col items-center testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/92.jpg" alt="Amina B." class="w-16 h-16 rounded-full mb-4 border-2 border-blue-400 shadow" loading="lazy">
+          <div class="flex mb-2">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+          </div>
+          <p class="italic mb-4">"Prompt, professional, and thorough. I recommend Squeaky Kleen to all my friends and colleagues!"</p>
+          <p class="font-semibold">— Amina B., Office Manager</p>
+        </div>
+        <div class="swiper-slide bg-white p-6 rounded-lg shadow-md flex flex-col items-center testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/59.jpg" alt="Chinedu O." class="w-16 h-16 rounded-full mb-4 border-2 border-blue-400 shadow" loading="lazy">
+          <div class="flex mb-2">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+          </div>
+          <p class="italic mb-4">"Our post-renovation mess was gone in hours. The team was friendly and efficient!"</p>
+          <p class="font-semibold">— Chinedu O., Homeowner</p>
+        </div>
+        <div class="swiper-slide bg-white p-6 rounded-lg shadow-md flex flex-col items-center testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/69.jpg" alt="Ngozi E." class="w-16 h-16 rounded-full mb-4 border-2 border-blue-400 shadow" loading="lazy">
+          <div class="flex mb-2">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+          </div>
+          <p class="italic mb-4">"I love how fresh my home feels after I get home from work. Squeaky Kleen is the best!"</p>
+          <p class="font-semibold">— Ngozi E., Repeat Customer</p>
+        </div>
+        <div class="swiper-slide bg-white p-6 rounded-lg shadow-md flex flex-col items-center testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/16.jpg" alt="Tunde A." class="w-16 h-16 rounded-full mb-4 border-2 border-blue-400 shadow" loading="lazy">
+          <div class="flex mb-2">
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+            <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.967a1 1 0 00.95.69h4.175c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-1.175 0l-3.38 2.455c-.784.57-1.838-.197-1.54-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.049 9.394c-.783-.57-.38-1.81.588-1.81h4.175a1 1 0 00.95-.69l1.286-3.967z"/></svg>
+          </div>
+          <p class="italic mb-4">"Very reliable and trustworthy. My office has never looked better!"</p>
+          <p class="font-semibold">— Tunde A., Business Owner</p>
+        </div>
+      </div>
+      <!-- Slider controls -->
+      <div class="swiper-pagination mt-4"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 text-white animate-fadeIn">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready for a Squeaky Kleen Space?</h2>
+            <p class="text-xl mb-8">Let us bring the shine to your home or office. Schedule your cleaning today and experience the difference of a truly spotless space.</p>
+            <a href="#contact" class="inline-flex items-center gap-2 bg-yellow-500 text-blue-900 font-semibold py-3 px-6 rounded-lg hover:bg-yellow-400 transition shadow-lg ripple">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17l4 4 4-4m0-5V3" /></svg>
+                Get a Free Quote Now!
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 animate-fadeIn animate-sectionReveal">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 flex items-center justify-center gap-2">
+      <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+      Contact Us
+    </h2>
+    <div class="text-center max-w-lg mx-auto">
+      <form class="bg-white p-6 rounded-lg shadow-md mb-6 relative" autocomplete="off">
+        <div class="mb-4 relative">
+          <label for="contact-name" class="sr-only">Your Name</label>
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue-400">
+            <!-- User icon for name -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 15c2.485 0 4.797.657 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </span>
+          <input id="contact-name" name="name" type="text" placeholder="Your Name" class="w-full p-3 pl-10 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" required autocomplete="name">
+        </div>
+        <div class="mb-4 relative">
+          <label for="contact-email" class="sr-only">Your Email</label>
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-blue-400">
+            <!-- Mail icon for email -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </span>
+          <input id="contact-email" name="email" type="email" placeholder="Your Email" class="w-full p-3 pl-10 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" required autocomplete="email">
+        </div>
+        <div class="mb-4 relative">
+          <label for="contact-message" class="sr-only">How can we help you?</label>
+          <span class="absolute left-3 top-4 text-blue-400">
+            <!-- Chat bubble for message -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 14h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8s-9-3.582-9-8a9 9 0 1118 0z"/></svg>
+          </span>
+          <textarea id="contact-message" name="message" placeholder="How can we help you?" class="w-full p-3 pl-10 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" rows="4" required autocomplete="off"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition w-full flex items-center justify-center gap-2">
+          <span>Send Message</span>
+          <span id="formSpinner" class="hidden animate-spin"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none" opacity="0.2"/><path d="M4 12a8 8 0 018-8" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></span>
+        </button>
+        <p class="text-xs text-gray-500 mt-4" id="privacy-note">
+          By submitting this form, you agree to our <a href="#" class="underline text-blue-600 privacy-policy-link">Privacy Policy</a>. Your information will only be used to respond to your inquiry and will not be shared. We comply with GDPR and respect your data rights. You may request deletion or correction of your data at any time.
+        </p>
+      </form>
+      <p class="mb-2"><strong>Phone:</strong> +234 802 408 0384</p>
+      <p class="mb-2"><strong>Email:</strong> <a href="mailto:info@squeaky-kleen.ng" class="text-blue-600 hover:underline">info@squeaky-kleen.ng</a></p>
+      <p class="mb-2"><strong>Hours:</strong> Monday–Saturday, 8 AM–6 PM</p>
+      <img src="./qrcode.png" alt="Squeaky Kleen QR Code for WhatsApp contact" class="mx-auto mt-4 h-32 qr-responsive" loading="lazy">
+    </div>
+  </div>
+</section>
+
+    <!-- Decorative SVG Divider -->
+    <div class="w-full overflow-hidden leading-none rotate-180" style="margin-bottom: -1px;">
+      <svg viewBox="0 0 500 50" preserveAspectRatio="none" class="w-full h-8">
+        <path d="M0,0 C150,50 350,0 500,50 L500,00 L0,0 Z" style="stroke: none; fill: #e0e7ef;"></path>
+      </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div class="mb-4 md:mb-0">
+      © 2025 Squeaky Kleen. All rights reserved.
+    </div>
+    <div class="flex items-center space-x-6">
+      <a href="#" id="privacy-policy-link" class="underline hover:text-blue-400 focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400 privacy-policy-link" aria-haspopup="dialog" aria-controls="privacy-policy-modal">Privacy Policy</a>
+      <!-- ...other footer links... -->
+    </div>
+  </div>
+</footer>
+
+<!-- Privacy Policy Modal -->
+<div id="privacy-policy-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60 hidden" role="dialog" aria-modal="true" aria-labelledby="privacy-policy-title" tabindex="-1">
+  <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative" role="document">
+    <button id="close-privacy-policy" class="absolute top-4 right-4 text-gray-500 hover:text-black focus-visible:outline focus-visible:ring-2 focus-visible:ring-blue-400" aria-label="Close Privacy Policy Modal">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <h2 id="privacy-policy-title" class="text-2xl font-bold mb-4">Privacy Policy</h2>
+    <div class="overflow-y-auto max-h-96 pr-2 text-gray-800 text-sm" tabindex="0">
+      <p><strong>Last updated: June 27, 2025</strong></p>
+      <p>Squeaky Kleen is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information when you use our website.</p>
+      <ul class="list-disc pl-5 my-2">
+        <li>We only collect personal data you provide (e.g., via contact or newsletter forms).</li>
+        <li>Your data is used solely to respond to your inquiries or send requested updates.</li>
+        <li>We do not sell or share your data with third parties except as required by law.</li>
+        <li>We use cookies only for essential site functionality and analytics (if enabled, with your consent).</li>
+        <li>You may request to access, update, or delete your data at any time by contacting us.</li>
+      </ul>
+      <p>For more information or to exercise your rights, please contact us using the form on this site.</p>
+      <p class="mt-4">By using this site, you agree to this privacy policy.</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348024080384" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" class="fixed bottom-24 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg animate-bounce-slow flex items-center justify-center">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A12 12 0 003.48 20.52l-1.32 4.84a1 1 0 001.22 1.22l4.84-1.32A12 12 0 0020.52 3.48zm-8.52 17a10 10 0 1110-10 10 10 0 01-10 10zm5.2-7.6l-2.2-.6a1 1 0 00-1.1.3l-.7.7a7.72 7.72 0 01-3.3-3.3l.7-.7a1 1 0 00.3-1.1l-.6-2.2a1 1 0 00-1-.7H7a1 1 0 00-1 1A9 9 0 0012 21a1 1 0 001-1v-1.2a1 1 0 00-.7-1z"/></svg>
+    </a>
+    <!-- Back-to-Top Button -->
+    <button id="backToTop" aria-label="Back to top" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-opacity opacity-0 pointer-events-none" style="transition: opacity 0.3s;">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" /></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // Ensure all privacy policy links open the modal
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.privacy-policy-link').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var modal = document.getElementById('privacy-policy-modal');
+            if (modal) {
+              modal.classList.remove('hidden');
+              modal.setAttribute('aria-hidden', 'false');
+              document.body.classList.add('modal-open');
+              // Focus trap: focus modal
+              var focusable = modal.querySelector('[tabindex="0"]');
+              if (focusable) focusable.focus();
+            }
+          });
+        });
+      });
+    </script>
+    <!-- Google Analytics (GA4) and other external scripts remain inline for now -->
+</body>
+</html>

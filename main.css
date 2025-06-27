@@ -1,0 +1,79 @@
+/* main.css - refactored for maintainability */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes sectionReveal {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes bounce-slower {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out both;
+}
+.animate-sectionReveal {
+  animation: sectionReveal 1.2s cubic-bezier(.4,0,.2,1) both;
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2.5s infinite;
+}
+.animate-bounce-slower {
+  animation: bounce-slower 4s infinite;
+}
+body { font-family: 'Inter', sans-serif; }
+.service-card:hover, .testimonial-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.12);
+}
+.service-card, .testimonial-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.qr-responsive { max-width: 100%; height: auto; }
+#backToTop.show { opacity: 1 !important; pointer-events: auto; }
+.ripple { position: relative; overflow: hidden; }
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  pointer-events: none;
+  background: rgba(255,255,255,0.4);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.ripple:active:after {
+  opacity: 1;
+  transition: 0s;
+}
+:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+/* Removed all dark mode CSS rules and prefers-color-scheme media queries. Only light mode styles remain. */
+/* Modal styles */
+#privacy-policy-modal {
+  transition: opacity 0.2s ease;
+}
+#privacy-policy-modal[aria-hidden="false"] {
+  display: flex;
+  opacity: 1;
+}
+#privacy-policy-modal[aria-hidden="true"],
+#privacy-policy-modal.hidden {
+  display: none;
+  opacity: 0;
+}
+#privacy-policy-modal:focus {
+  outline: none;
+}
+
+/* Optional: Prevent background scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
