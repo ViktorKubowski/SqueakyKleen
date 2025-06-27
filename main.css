@@ -54,7 +54,13 @@ body { font-family: 'Inter', sans-serif; }
   opacity: 1;
   transition: 0s;
 }
-:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+:focus-visible {
+  outline: 2px solid #2563eb; /* blue-600 */
+  outline-offset: 2px;
+}
+button:focus-visible, a:focus-visible {
+  box-shadow: 0 0 0 2px #2563eb33;
+}
 /* Removed all dark mode CSS rules and prefers-color-scheme media queries. Only light mode styles remain. */
 /* Modal styles */
 #privacy-policy-modal {
@@ -76,4 +82,15 @@ body { font-family: 'Inter', sans-serif; }
 /* Optional: Prevent background scroll when modal is open */
 body.modal-open {
   overflow: hidden;
+}
+
+/* Improve color contrast for accessibility */
+.text-blue-700 { color: #1d4ed8; }
+.text-blue-600 { color: #2563eb; }
+.bg-blue-50 { background-color: #eff6ff; }
+
+/* Responsive improvements for modal and nav */
+@media (max-width: 640px) {
+  #privacy-policy-modal .max-w-lg { max-width: 98vw; }
+  #privacy-policy-modal .p-6 { padding: 1rem; }
 }

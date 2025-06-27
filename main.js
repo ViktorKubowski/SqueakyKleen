@@ -46,6 +46,23 @@ if (newsletterForm) {
     }
   });
 }
+// Newsletter form simple handler (replace with real integration as needed)
+const newsletterFormSimple = document.getElementById('newsletter-form');
+if (newsletterFormSimple) {
+  newsletterFormSimple.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('newsletter-email');
+    const successMsg = document.getElementById('newsletter-success');
+    if (emailInput.value && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(emailInput.value)) {
+      successMsg.classList.remove('hidden');
+      emailInput.value = '';
+      setTimeout(() => successMsg.classList.add('hidden'), 5000);
+    } else {
+      emailInput.classList.add('border-red-500');
+      setTimeout(() => emailInput.classList.remove('border-red-500'), 2000);
+    }
+  });
+}
 // Contact form spinner and honeypot
 const contactForm = document.querySelector('#contact form');
 if (contactForm) {
@@ -74,6 +91,43 @@ if (contactForm) {
       contactForm.reset();
       setTimeout(function() { msg.remove(); }, 6000);
     }, 1200);
+  });
+}
+// Contact form validation feedback
+const contactFormValidation = document.querySelector('form[autocomplete="off"]');
+if (contactFormValidation) {
+  contactFormValidation.addEventListener('submit', function (e) {
+    let valid = true;
+    const name = contactFormValidation.querySelector('#contact-name');
+    const email = contactFormValidation.querySelector('#contact-email');
+    const message = contactFormValidation.querySelector('#contact-message');
+    const nameError = contactFormValidation.querySelector('#name-error');
+    const emailError = contactFormValidation.querySelector('#email-error');
+    const messageError = contactFormValidation.querySelector('#message-error');
+    // Name
+    if (!name.value.trim()) {
+      nameError.classList.remove('hidden');
+      valid = false;
+    } else {
+      nameError.classList.add('hidden');
+    }
+    // Email
+    if (!email.value.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value)) {
+      emailError.classList.remove('hidden');
+      valid = false;
+    } else {
+      emailError.classList.add('hidden');
+    }
+    // Message
+    if (!message.value.trim()) {
+      messageError.classList.remove('hidden');
+      valid = false;
+    } else {
+      messageError.classList.add('hidden');
+    }
+    if (!valid) {
+      e.preventDefault();
+    }
   });
 }
 // Back-to-top button logic
@@ -167,6 +221,37 @@ navToggle.addEventListener('click', () => {
     }, 100);
   }
 });
+// Accessibility and focus trap for mobile menu
+function trapFocus(element) {
+  const focusableEls = element.querySelectorAll('a, button, textarea, input, select, [tabindex]:not([tabindex="-1"])');
+  const firstFocusableEl = focusableEls[0];
+  const lastFocusableEl = focusableEls[focusableEls.length - 1];
+  function handleTab(e) {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusableEl) {
+          e.preventDefault();
+          lastFocusableEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastFocusableEl) {
+          e.preventDefault();
+          firstFocusableEl.focus();
+        }
+      }
+    }
+    if (e.key === 'Escape') {
+      element.classList.add('hidden');
+      document.getElementById('nav-hamburger').classList.remove('hidden');
+      document.getElementById('nav-close').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      document.getElementById('nav-toggle').focus();
+      element.removeEventListener('keydown', handleTab);
+    }
+  }
+  element.addEventListener('keydown', handleTab);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const navToggle = document.getElementById('nav-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -186,6 +271,12 @@ document.addEventListener('DOMContentLoaded', function () {
         navHamburger.classList.add('hidden');
         navClose.classList.remove('hidden');
         document.body.classList.add('overflow-hidden');
+        // Focus trap
+        setTimeout(() => {
+          const firstLink = mobileMenu.querySelector('a');
+          if (firstLink) firstLink.focus();
+          trapFocus(mobileMenu);
+        }, 100);
       }
     });
     // Optional: close menu when clicking outside or on a link
@@ -207,4 +298,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  // ...existing privacy policy modal code...
 });
