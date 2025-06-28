@@ -299,5 +299,50 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ...existing privacy policy modal code...
+  // Rotating hero image from stock images
+  (function() {
+    // List of stock images (add/remove as needed)
+    const stockImages = [
+      'img/stock/afro-woman-holding-bucket-with-cleaning-items.jpg',
+      'img/stock/freepik__a-black-woman-age-25-with-curly-hair-holding-a-blu__36735.png',
+      'img/stock/freepik__a-black-woman-age-25-with-curly-hair-holding-a-blu__36736.png',
+      'img/stock/freepik__a-black-woman-age-25-with-curly-hair-holding-a-blu__36737.png',
+      'img/stock/freepik__a-black-woman-age-25-with-curly-hair-holding-a-blu__36738.png',
+      'img/stock/front-view-man-cleaning-indoors.jpg',
+      'img/stock/full-shot-man-pushing-elevator-button.jpg',
+      'img/stock/full-shot-men-cleaning-office.jpg',
+      'img/stock/hand-holding-stand-with-cleaning-products.jpg',
+      'img/stock/hero-cleaning.jpg',
+      'img/stock/side-view-adult-male-cleaning-window.jpg',
+      'img/stock/side-view-man-cleaning-table.jpg',
+      'img/stock/woman-is-holding-cleaning-product-gloves-rags-basin-white-wall.jpg'
+    ];
+    // Default timer in hours (can be changed to 3, 6, 2, 24, etc.)
+    const TIMER_HOURS = 6; // Change this value as needed
+    const TIMER_MS = TIMER_HOURS * 60 * 60 * 1000;
+    // Use localStorage to persist the current image and timestamp
+    function getCurrentIndex() {
+      const data = JSON.parse(localStorage.getItem('heroImageData') || '{}');
+      const now = Date.now();
+      if (!data.timestamp || !data.index || now - data.timestamp > TIMER_MS) {
+        // Pick a new random image index
+        let newIndex = Math.floor(Math.random() * stockImages.length);
+        // Avoid repeating the same image
+        if (data.index !== undefined && stockImages.length > 1 && newIndex === data.index) {
+          newIndex = (newIndex + 1) % stockImages.length;
+        }
+        localStorage.setItem('heroImageData', JSON.stringify({ index: newIndex, timestamp: now }));
+        return newIndex;
+      }
+      return data.index;
+    }
+    function setHeroImage() {
+      const heroImg = document.querySelector('.parallax-bg');
+      if (heroImg) {
+        const idx = getCurrentIndex();
+        heroImg.src = stockImages[idx];
+      }
+    }
+    document.addEventListener('DOMContentLoaded', setHeroImage);
+  })();
 });

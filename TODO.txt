@@ -1,0 +1,24 @@
+Here are enhancements that typically require additional cost for a site like yours:
+
+1. Form Backend Services (beyond free tier)
+Services like Formcarry, Formspree, Getform, etc. have free plans with limits (submissions/month, features).
+Paid plans unlock higher limits, file uploads, spam protection, integrations, etc.
+2. Newsletter/Email Marketing Platforms
+Services like Mailchimp, ConvertKit, Brevo, etc. are free up to a certain number of subscribers/emails.
+Paid plans needed for automation, advanced analytics, or larger lists.
+3. Custom Domain & Professional Email
+Buying a custom domain (e.g., squeaky-kleen.ng) and using branded email (e.g., info@squeaky-kleen.ng) costs money.
+4. Premium Hosting/Deployment
+Vercel, Netlify, and GitHub Pages are free for most static sites, but advanced features (team, analytics, bandwidth) may cost extra.
+5. Booking/Calendar/Payment Integrations
+Embedding a booking system (like Calendly, Acuity, or a custom solution) may have costs for advanced features.
+Payment gateways (Paystack, Stripe, PayPal) may have transaction fees or monthly costs for advanced features.
+6. Advanced Analytics
+Google Analytics is free, but some analytics tools (like Plausible, Fathom) are paid.
+7. Stock Images, Icons, or Fonts
+Most assets can be free, but premium images, icon sets, or custom fonts may require a license.
+8. SEO/Marketing Tools
+Tools for keyword research, competitor analysis, or advanced SEO audits (e.g., SEMrush, Ahrefs) are paid.
+Summary:
+All core features can be free, but scaling, automation, or advanced integrations usually require a paid plan or service.
+If you want to know the cost for a specific feature, let me know!
